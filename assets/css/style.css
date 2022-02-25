@@ -1,0 +1,138 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    /* Nhằm loại bỏ khỏi tính toán kích thước khi có border or padding */
+    box-sizing: border-box;
+}
+
+/* Nhằm cho các thẻ có CHỮ được kế thừa font của nhau */
+html{
+    font-family: Arial, Helvetica, sans-serif; 
+}
+/* Để chọn muti-cursor: ấn giữ Alt (option) 
+B2: bấm Alt + -> (phím shift để chọn ký tự đó)
+*/
+/* 
+    1. Từ ngoài vào trong
+    2. Từ trên xuống dưới
+    3. Từ tổng quan đến chi tiết
+Các câu hỏi khi tạo website:
+    1. Vị trí
+    2. Kích thước
+    3. Màu sắc
+    4. Kiểu dáng (kiểu chữ, hình dáng (tròn, vuống,...))
+ */
+
+#main{
+
+}
+/* 2. HEADER */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46.5px;
+    background-color: #000;
+}
+
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none; 
+}
+
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    /* display: inline-block; Nhằm chỉnh hiển thị list: inline-block (cùng dòng); none = tắt đi. Chỉ dùng cho thẻ li cấp 1 */
+    position: relative;
+}
+
+/* Nhằm cho thuộc tính màu của thẻ li > a, chỉ bị ảnh hưởng cấp 1, nav thì CSS cho trực tiếp thẻ cấp 1 đó */
+#nav > li > a{ 
+    color: #fff; 
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none; /* Nhằm tắt gạch chân của chữ*/
+    line-height: 46.5px; /*Nhằm căn giữa cho dòng chứa chữ bằng với height của header*/
+    padding: 0 24px;
+    display: inline-block; /*Mặc định display của thẻ a nó chỉ ăn theo chiều ngang của line-height chứ kh ăn theo chiều cao => dùng display: inline-block*/
+    width: 100%;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+/* Ta có thể seleter 2 thuộc tính giống nhau như phía dưới */
+#nav .subnav li:hover a,
+#nav > li:hover > a{    /*Dùng hover ở thẻ li nhằm khi hover vào thẻ con của li sẽ kh bị mất màu của thẻ li*/
+    color: #000 !important; /* "!important" nhằm khi hover vào thì thẻ li và a sẽ bị đổi màu. theo thứ tự ưu tiên nhất*/
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+/* END HEADER */
+
+/* begin search btn */
+
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-icon  {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+}
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+
+}
+/* end search btn */
+
+/* 3. SLIDER */
+#slider{
+    margin-top: 46.5px;
+    min-height: 500px;
+    background-color: #ccc;
+}
+/* END SLIDER */
+
+
+/* 4. CONTENT */
+#content{
+    height: 1000px;
+}
+/* END CONTENT */
+
+
+/* 5. FOOTER */
+#footer{
+
+}
+/* END FOOTER */
