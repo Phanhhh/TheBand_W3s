@@ -24,6 +24,13 @@ Các câu hỏi khi tạo website:
     4. Kiểu dáng (kiểu chữ, hình dáng (tròn, vuống,...))
  */
 
+ .clear{
+     clear: both;
+ }
+
+ .text-white{
+     color: #fff !important; 
+ }
 #main{
 
 }
@@ -151,8 +158,147 @@ Các câu hỏi khi tạo website:
 
 /* 4. CONTENT */
 #content{
-    height: 1000px;
+    
 }
+
+#content .content-section{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text{
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#content .member-item{
+    float: left;
+    margin-top: 58px;
+    width: 33.333333%;
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-avatar{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#content .tour-section{
+    background-color: black;
+}
+
+.tickets-list{
+    background-color: #fff;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.tickets-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+/* Place */
+
+.place-tour{
+    margin: 32px -8px 0;
+}
+
+.place-item{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.place-hover {
+    width: 100%;
+}
+
+.place-hover:hover {
+    opacity: 0.6;
+}
+
+.place-container{
+    background-color: #fff;
+    padding: 16px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.place-name{
+    
+}
+
+.place-time{
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.place-desc{
+    margin: 15px auto;
+    line-height: 1.4;
+
+}
+
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+}
+
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
 /* END CONTENT */
 
 
