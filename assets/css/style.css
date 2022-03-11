@@ -307,3 +307,111 @@ Các câu hỏi khi tạo website:
 
 }
 /* END FOOTER */
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    /* Nham can le cho nam giua */
+    align-items: center;    
+    justify-content: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex !important;
+}
+
+.modal-container {
+    background: #fff;
+    /* -> nham reponsive voi man hinh*/
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 1s;
+}
+
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.modal-head-bag{
+    margin-right: 16px;
+}
+
+.modal-close:hover {
+    opacity: 1;
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ffF;
+    padding: 12px 16px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px; 
+}
+
+#buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+    color: #2196F3;
+}
+
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0.1;
+        transform: translateY(-160px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
