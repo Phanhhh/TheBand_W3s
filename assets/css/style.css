@@ -24,13 +24,102 @@ Các câu hỏi khi tạo website:
     4. Kiểu dáng (kiểu chữ, hình dáng (tròn, vuống,...))
  */
 
+ /* Common */
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Tạo 1 element giả sau 1 cái class nhằm cho
+ class ôm hết các thằng con trong đó 
+ thay thế cho div -> class .clear
+*/
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+
+.col-third {
+    width: 33.3333%;
+}
+
  .clear{
      clear: both;
+ }
+
+ .text-15 {
+     font-size: 15px;
+ }
+
+ .text-center{
+     text-align: center;
  }
 
  .text-white{
      color: #fff !important; 
  }
+
+ .mt-8 {
+     margin-top: 8px !important;
+ }
+
+ .mt-16 {
+    margin-top: 16px !important;
+}
+
+.mt-24 {
+    margin-top: 24px !important;
+}
+
+.margin-bottom {
+    margin-bottom: 16px;
+}
+
+.padding-64 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.opacity {
+    opacity: 0.6;
+}
+
+ /* Main */
 #main{
 
 }
@@ -119,7 +208,6 @@ Các câu hỏi khi tạo website:
 #header .search-btn:hover{
     background-color: #f44336;
     cursor: pointer;
-
 }
 /* end search btn */
 
@@ -165,7 +253,7 @@ Các câu hỏi khi tạo website:
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
 }
 
 #content .section-heading{
@@ -190,11 +278,8 @@ Các câu hỏi khi tạo website:
     text-align: justify;
 }
 
-#content .member-item{
-    float: left;
-    margin-top: 58px;
-    width: 33.333333%;
-    text-align: center;
+#content .member-list{
+    margin-top: 48px;
 }
 
 #content .member-name{
@@ -245,14 +330,9 @@ Các câu hỏi khi tạo website:
 /* Place */
 
 .place-tour{
-    margin: 32px -8px 0;
+    margin-top: 32px;
 }
 
-.place-item{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-}
 
 .place-hover {
     width: 100%;
@@ -287,25 +367,59 @@ Các câu hỏi khi tạo website:
 
 }
 
-.place-buy-btn{
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
+/* Contact from */
+
+.contact-content {
+    padding-top: 48px;
 }
 
-.place-buy-btn:hover{
-    color: #000;
-    background-color: #ccc;
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-style: 15px;
+}
+
+.contact-form .form-control {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+/*  Map session */
+
+.map-session img{
+    width: 100%;
+    height: auto;
 }
 
 /* END CONTENT */
 
 
 /* 5. FOOTER */
-#footer{
-
+.social-list {
+    font-size: 24px;
 }
+
+.social-list a {
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.social-list a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+
 /* END FOOTER */
 
 .modal{
