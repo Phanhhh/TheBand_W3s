@@ -129,7 +129,7 @@ Các câu hỏi khi tạo website:
     top: 0;
     left: 0;
     right: 0;
-    height: 46.5px;
+    height: 46px;
     background-color: #000;
     z-index: 1;
 }
@@ -156,7 +156,7 @@ Các câu hỏi khi tạo website:
 }
 #nav li a{
     text-decoration: none; /* Nhằm tắt gạch chân của chữ*/
-    line-height: 46.5px; /*Nhằm căn giữa cho dòng chứa chữ bằng với height của header*/
+    line-height: 46px; /*Nhằm căn giữa cho dòng chứa chữ bằng với height của header*/
     padding: 0 24px;
     display: inline-block; /*Mặc định display của thẻ a nó chỉ ăn theo chiều ngang của line-height chứ kh ăn theo chiều cao => dùng display: inline-block*/
     width: 100%;
@@ -194,27 +194,44 @@ Các câu hỏi khi tạo website:
 /* END HEADER */
 
 /* begin search btn */
-
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+#header .menu-icon,
 #header .search-icon  {
     color: #fff;
     font-size: 20px;
-    line-height: 46.5px;
+    line-height: 46px;
 }
+
 #header .search-btn:hover{
     background-color: #f44336;
     cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    background-color: #000;
 }
 /* end search btn */
 
 /* 3. SLIDER */
 #slider{
     position: relative;
-    margin-top: 46.5px;
+    margin-top: 46px;
     padding-top: 50%; /* Khi có gtri % thì sẽ lấy giá trị = tỉ lệ của chiều rộng chính nó */
     background: url('/assets/img/slider/slider1_chicago.jpg') top center / cover  no-repeat;
 
@@ -251,9 +268,12 @@ Các câu hỏi khi tạo website:
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading{
@@ -330,7 +350,7 @@ Các câu hỏi khi tạo website:
 /* Place */
 
 .place-tour{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 
